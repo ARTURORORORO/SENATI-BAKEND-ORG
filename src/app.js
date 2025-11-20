@@ -5,6 +5,7 @@ const personaRoutes = require("./routes/persona.routes");
 
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/u", userRoutes);
 app.use("/p", personaRoutes);
